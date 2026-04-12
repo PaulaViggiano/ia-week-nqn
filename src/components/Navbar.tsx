@@ -22,8 +22,8 @@ const Navbar = () => {
           IA WEEK <span className="text-primary">NQN</span>
         </a>
         <div className="flex items-center gap-6">
-          <a href="#inscripcion" className="hidden sm:inline text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Inscripción
+          <a href="#informacion" className="hidden sm:inline text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Información 
           </a>
           <a
             href={CTA_URL}

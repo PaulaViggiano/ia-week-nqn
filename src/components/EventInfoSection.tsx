@@ -4,7 +4,7 @@ const EventInfoSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section ref={ref} className="gradient-dark-section py-20">
+    <section id="informacion" ref={ref} className="gradient-dark-section py-20">
       <div
         className={`container max-w-3xl text-center transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
