@@ -16,7 +16,7 @@ const EventInfoSection = () => {
         <div className="space-y-6 text-lg">
           <p className="text-foreground">📅 14, 15 y 16 de mayo de 2026</p>
           <p className="text-foreground">
-            📍 ENE Polo Tecnológico — Los Ligustros 2222, entre Av. Soldi y Av. Huilén, Neuquén Capital
+            📍 ENE Polo Tecnológico — Av. Raúl Soldi y Av. Huilén, Q8300 Neuquén – Argentina
           </p>
           <p className="text-primary font-heading font-bold text-xl">✅ Entrada 100% gratuita</p>
         </div>
