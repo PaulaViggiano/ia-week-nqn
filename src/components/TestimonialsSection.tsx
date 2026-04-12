@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useScrollReveal } from "./useScrollReveal";
+
 
 const testimonials = [
   {
     name: "SAIA",
     role: "Sociedad Argentina de Inteligencia Artificial",
-    photo: "/testimonials/saia.png",
+    photo: "/logos/saia.png",
+    logo: "/logos/saia.png",
     quote:
       "La IA no es sólo una herramienta tecnológica: es una oportunidad para transformar industrias, generar talento local y posicionar a la Argentina como referente regional en innovación.",
   },
@@ -13,6 +15,7 @@ const testimonials = [
     name: "Diego Manfio",
     role: "Titular de Ingeniería SIMA SA · ENE Polo Tecnológico",
     photo: "/testimonials/DiegoManfio.png",
+    logo: "/logos/ene.png",
     quote:
       "Un evento de IA en Neuquén es una ventana al futuro: ideas, innovación y oportunidades para transformar nuestra región.",
   },
@@ -20,34 +23,62 @@ const testimonials = [
     name: "Gustavo Cabrera",
     role: "IFES Educación Superior",
     photo: "/testimonials/GustavoCabrera.png",
+    logo: "/logos/ifesLogo.png",
     quote:
-      "Este evento es clave para potenciar el futuro de Vaca Muerta.",
+      "Este evento es clave para potenciar el futuro de Vaca Muerta, integrando la IA para el crecimiento y buscando que la tecnología impulse la capacidad de nuestro sector productivo.",
   },
   {
     name: "Marcos Galian",
     role: "MSGN",
     photo: "/testimonials/MarcosGalian.png",
+    logo: "/logos/polo.png",
     quote:
-      "Este evento es una gran oportunidad para conocer casos de éxito, capacitarse, conectar con otros y escuchar a los expertos.",
+      "Este evento es una gran oportunidad para capacitarse, conectar con otros y escuchar a los expertos. Se generará una sinergia de networking altamente positiva para toda la región.",
   },
   {
     name: "Marcela Messineo",
     role: "MMPRO Eventos",
     photo: "/testimonials/MarcelaMessineo.png",
+    logo: "/logos/mmpro.png",
     quote:
-      "Integramos la IA como una fuerza transformadora que expande el talento, impulsa la innovación y eleva todo nuestro ecosistema productivo.",
+      "Es una invitación a activar, el potencial de nuestra región. Integramos la IA como una fuerza transformadora que expande el talento e impulsa la innovación.",
   },
 ];
-
-
  
-const Card = ({ t, i }: { t: (typeof testimonials)[0]; i: number }) => (
+const FlipAvatar = ({ photo, logo, name, index }: { photo: string; logo: string; name: string; index: number }) => (
+  <div className="w-14 h-14 flex-shrink-0" style={{ perspective: "600px" }}>
+    <div
+      className="relative w-full h-full"
+      style={{
+        transformStyle: "preserve-3d",
+        animationName: "flip-slow",
+        animationDuration: "10s",
+        animationTimingFunction: "ease-in-out",
+        animationDelay: `${index * 1.2}s`,
+        animationIterationCount: "infinite",
+      }}
+    >
+      <div
+        className="absolute inset-0 rounded-full overflow-hidden"
+        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+      >
+        <img src={photo} alt={name} className="w-full h-full object-cover" />
+      </div>
+      <div
+        className="absolute inset-0 rounded-full bg-secondary/80 flex items-center justify-center p-2"
+        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+      >
+        <img src={logo} alt={`${name} logo`} className="w-8 h-8 object-contain" />
+      </div>
+    </div>
+  </div>
+);
+ 
+const Card = ({ t, index }: { t: (typeof testimonials)[0]; index: number }) => (
   <div className="glass-card p-5 flex gap-4 items-start w-[340px] flex-shrink-0">
-    <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+    <FlipAvatar photo={t.photo} logo={t.logo} name={t.name} index={index} />
     <div className="flex-1 min-w-0">
-      <h3 className="font-heading font-bold text-sm text-foreground">
-        {t.name}
-      </h3>
+      <h3 className="font-heading font-bold text-sm text-foreground">{t.name}</h3>
       <p className="text-xs text-muted-foreground mb-2">{t.role}</p>
       <p className="text-xs text-foreground/70 leading-relaxed italic">
         "{t.quote}"
@@ -58,6 +89,39 @@ const Card = ({ t, i }: { t: (typeof testimonials)[0]; i: number }) => (
  
 const TestimonialsSection = () => {
   const { ref, visible } = useScrollReveal();
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
+  const speed = 0.4; // px por frame
+ 
+  // Auto-scroll
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let animId: number;
+ 
+    const step = () => {
+      if (!paused && track) {
+        track.scrollLeft += speed;
+        // Loop infinito: cuando llega a la mitad (contenido duplicado), vuelve al inicio
+        const half = track.scrollWidth / 2;
+        if (track.scrollLeft >= half) {
+          track.scrollLeft -= half;
+        }
+      }
+      animId = requestAnimationFrame(step);
+    };
+ 
+    animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
+  }, [paused]);
+ 
+  // Pausar con interacción del usuario
+  const handleInteractionStart = () => setPaused(true);
+  const handleInteractionEnd = () => {
+    // Pequeño delay para que no retome bruscamente
+    setTimeout(() => setPaused(false), 1500);
+  };
+ 
   const items = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
  
   return (
@@ -72,29 +136,32 @@ const TestimonialsSection = () => {
         </h2>
       </div>
  
-      <div className="relative w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
  
-        <div className="testimonials-track flex gap-6 hover:[animation-play-state:paused]">
+        <div
+          ref={trackRef}
+          className="flex gap-6 overflow-x-auto px-8 cursor-grab active:cursor-grabbing"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
+          onMouseEnter={handleInteractionStart}
+          onMouseLeave={handleInteractionEnd}
+          onTouchStart={handleInteractionStart}
+          onTouchEnd={handleInteractionEnd}
+        >
           {items.map((t, i) => (
-            <Card key={`${t.name}-${i}`} t={t} i={i % testimonials.length} />
+            <Card key={`${t.name}-${i}`} t={t} index={i % testimonials.length} />
           ))}
         </div>
       </div>
  
       <style>{`
-        @keyframes testimonials-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+        @keyframes flip-slow {
+          0%, 70% { transform: rotateY(0deg); }
+          75%, 90% { transform: rotateY(180deg); }
+          100% { transform: rotateY(0deg); }
         }
-        .testimonials-track {
-          animation: testimonials-scroll 80s linear infinite;
-          width: max-content;
-        }
-        .testimonials-track:hover {
-          animation-play-state: paused;
-        }
+        div::-webkit-scrollbar { display: none; }
       `}</style>
     </section>
   );
