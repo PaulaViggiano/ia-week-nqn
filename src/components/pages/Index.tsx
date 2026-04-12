@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import CountdownSection from "@/components/CountdownSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SpeakersSection from "@/components/SpeakersSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import AudienceSection from "@/components/AudienceSection";
 import EventInfoSection from "@/components/EventInfoSection";
 import OrganizersSection from "@/components/OrganizersSection";
@@ -16,10 +17,11 @@ const Index = () => (
     <CountdownSection />
     <FeaturesSection />
     <SpeakersSection />
+    <TestimonialsSection />
     <AudienceSection />
     <EventInfoSection />
-    <OrganizersSection />
     <CtaSection />
+    <OrganizersSection />
     <Footer />
   </>
 );

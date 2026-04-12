@@ -59,7 +59,7 @@ const OrganizersSection = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 60s linear infinite;
           width: max-content;
         }
         .animate-marquee:hover {
