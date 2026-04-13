@@ -2,7 +2,7 @@ import { useScrollReveal } from "./useScrollReveal";
 
 const speakers = [
   { name: "Santi Siri", role: "Speaker confirmado", img: "/santiagoSiri.png" },
-  { name: "Freddy Vivas", role: "Speaker confirmado", img: "/frediVivas.png" },
+  { name: "Freddi Vivas", role: "Speaker confirmado", img: "/frediVivas.png" },
   { name: "+ Speakers", role: "Próximamente", img: null },
 ];
 

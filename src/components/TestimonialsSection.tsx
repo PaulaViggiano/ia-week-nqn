@@ -4,9 +4,9 @@ import { useScrollReveal } from "./useScrollReveal";
 
 const testimonials = [
   {
-    name: "SAIA",
+    name: "Alexander Ditzend",
     role: "Sociedad Argentina de Inteligencia Artificial",
-    photo: "/logos/saia.png",
+    photo: "/testimonials/AlexanderDitzend.png",
     logo: "/logos/saia.png",
     quote:
       "La IA no es sólo una herramienta tecnológica: es una oportunidad para transformar industrias, generar talento local y posicionar a la Argentina como referente regional en innovación.",
