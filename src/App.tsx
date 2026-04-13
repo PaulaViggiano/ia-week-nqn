@@ -13,6 +13,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+       {/* Fondo tecnológico */}
+      <div className="bg-canvas" />
+      <div className="grid-lines" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

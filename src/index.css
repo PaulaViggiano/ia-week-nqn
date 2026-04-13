@@ -36,11 +36,6 @@
 
     --radius: 0.75rem;
 
-    --gradient-dark: 210 100% 8%;
-    --gradient-mid: 205 90% 20%;
-    --gradient-light: 200 85% 45%;
-    --gradient-cyan: 190 100% 55%;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -71,21 +66,46 @@
 }
 
 @layer utilities {
+  /* ─── Fondos globales fijos ─── */
+  .bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 20%, rgba(0,87,183,0.28) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(0,229,255,0.1) 0%, transparent 55%),
+      hsl(210 100% 6%);
+  }
+
+  .grid-lines {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  /* ─── Gradientes de secciones (semi-transparentes) ─── */
   .gradient-hero {
     background: linear-gradient(
       160deg,
-      hsl(210 100% 8%) 0%,
-      hsl(205 90% 18%) 30%,
-      hsl(200 85% 35%) 65%,
-      hsl(190 100% 45%) 100%
+      hsl(210 100% 8% / 0.9) 0%,
+      hsl(205 90% 18% / 0.85) 30%,
+      hsl(200 85% 35% / 0.8) 65%,
+      hsl(190 100% 45% / 0.8) 100%
     );
   }
 
   .gradient-dark-section {
     background: linear-gradient(
       180deg,
-      hsl(210 100% 6%) 0%,
-      hsl(210 80% 10%) 100%
+      hsl(210 100% 6% / 0.92) 0%,
+      hsl(210 80% 10% / 0.92) 100%
     );
   }
 
@@ -111,7 +131,7 @@
   }
 
   .particle {
-    @apply absolute rounded-full bg-primary/20;
+    @apply absolute rounded-full bg-primary/30;
     animation: float-particle linear infinite;
   }
 
@@ -122,6 +142,11 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* ─── Keyframes ─── */
+@keyframes gridMove {
+  to { background-position: 60px 60px; }
 }
 
 @keyframes float-particle {
