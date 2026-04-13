@@ -1,9 +1,12 @@
+import Particles from "./Particles";
 const CTA_URL = "https://tktevent.com/pass/event/form/157";
 
 const HeroSection = () => (
   <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a1628]">
     {/* Fondo gradiente que conecta con el resto del sitio */}
     <div className="absolute inset-0 bg-gradient-to-b from-[#0b5da6] via-[#0a3a6e] to-[#0a1628] opacity-30" />
+
+    <Particles />
 
     {/* Banner image */}
     <div className="relative z-10 w-full max-w-6xl px-4 mt-20">

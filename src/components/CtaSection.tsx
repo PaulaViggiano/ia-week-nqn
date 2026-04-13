@@ -1,5 +1,6 @@
 import { useScrollReveal } from "./useScrollReveal";
 
+
 const CTA_URL = "https://tktevent.com/pass/event/form/157";
 
 const CtaSection = () => {
