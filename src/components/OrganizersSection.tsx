@@ -12,7 +12,7 @@ const OrganizersSection = () => {
   const { ref, visible } = useScrollReveal();
  
   return (
-    <section ref={ref} className="bg-background/90 py-16 overflow-hidden">
+    <section ref={ref} className="py-16 overflow-hidden">
       <div
         className={`container text-center mb-10 transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

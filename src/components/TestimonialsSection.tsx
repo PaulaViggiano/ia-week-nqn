@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
   const items = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
  
   return (
-    <section ref={ref} className="gradient-dark-section py-20 overflow-hidden">
+    <section ref={ref} className=" py-20 overflow-hidden">
       <div className="container">
         <h2
           className={`font-heading font-bold text-3xl md:text-4xl text-center text-foreground mb-12 transition-all duration-700 ${

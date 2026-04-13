@@ -7,7 +7,7 @@ const CtaSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section id="inscripcion" ref={ref} className="gradient-dark-section py-24">
+    <section id="inscripcion" ref={ref} className="py-24">
       <div
         className={`container text-center max-w-2xl transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

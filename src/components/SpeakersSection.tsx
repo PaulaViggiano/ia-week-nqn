@@ -9,7 +9,7 @@ const speakers = [
 const SpeakersSection = () => {
   const { ref, visible } = useScrollReveal();
   return (
-    <section ref={ref} className="gradient-dark-section py-20">
+    <section ref={ref} className="py-20">
       <div className="container">
         <h2
           className={`font-heading font-bold text-3xl md:text-4xl text-center text-foreground mb-12 transition-all duration-700 ${

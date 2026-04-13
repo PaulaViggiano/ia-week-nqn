@@ -30,7 +30,7 @@ const CountdownSection = () => {
   ];
 
   return (
-    <section ref={ref} className="gradient-dark-section py-16">
+    <section ref={ref} className="py-16">
       <div
         className={`container text-center transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
