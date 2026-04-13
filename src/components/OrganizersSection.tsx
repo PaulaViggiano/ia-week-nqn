@@ -10,7 +10,7 @@ const orgs = [
 
 const OrganizersSection = () => {
   const { ref, visible } = useScrollReveal();
-
+ 
   return (
     <section ref={ref} className="bg-background py-16 overflow-hidden">
       <div
@@ -26,48 +26,26 @@ const OrganizersSection = () => {
           <span>Producen</span>
         </div>
       </div>
-
-      {/* Marquee infinito */}
+ 
       <div className="relative w-full">
-        {/* Fade en los bordes */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
-
-        <div className="flex animate-marquee">
-          {/* Se duplica el contenido para el loop infinito */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+ 
+        <div className="flex gap-10 w-max animate-marquee-scroll hover:[animation-play-state:paused]">
           {[...orgs, ...orgs, ...orgs, ...orgs].map((org, i) => (
-            <div
-              key={`${org.name}-${i}`}
-              className="flex flex-col items-center gap-3 mx-10 flex-shrink-0"
-            >
+            <div key={`${org.name}-${i}`} className="flex flex-col items-center gap-3 flex-shrink-0">
               <img
                 src={org.logo}
                 alt={org.name}
                 className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
               />
-              <span className="text-xs text-muted-foreground whitespace-nowrap">
-                {org.name}
-              </span>
+              <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
             </div>
           ))}
         </div>
       </div>
-
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 60s linear infinite;
-          width: max-content;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };
-
+ 
 export default OrganizersSection;

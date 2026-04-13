@@ -114,6 +114,14 @@
     @apply absolute rounded-full bg-primary/20;
     animation: float-particle linear infinite;
   }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes float-particle {

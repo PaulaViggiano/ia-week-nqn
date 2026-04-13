@@ -48,26 +48,13 @@ const testimonials = [
 const FlipAvatar = ({ photo, logo, name, index }: { photo: string; logo: string; name: string; index: number }) => (
   <div className="w-14 h-14 flex-shrink-0" style={{ perspective: "600px" }}>
     <div
-      className="relative w-full h-full"
-      style={{
-        transformStyle: "preserve-3d",
-        animationName: "flip-slow",
-        animationDuration: "10s",
-        animationTimingFunction: "ease-in-out",
-        animationDelay: `${index * 1.2}s`,
-        animationIterationCount: "infinite",
-      }}
+      className="relative w-full h-full animate-flip-slow"
+      style={{ transformStyle: "preserve-3d", animationDelay: `${index * 1.2}s` }}
     >
-      <div
-        className="absolute inset-0 rounded-full overflow-hidden"
-        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
-      >
+      <div className="absolute inset-0 rounded-full overflow-hidden [backface-visibility:hidden]">
         <img src={photo} alt={name} className="w-full h-full object-cover" />
       </div>
-      <div
-        className="absolute inset-0 rounded-full bg-secondary/80 flex items-center justify-center p-2"
-        style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
-      >
+      <div className="absolute inset-0 rounded-full overflow-hidden bg-secondary/80 flex items-center justify-center p-2 [backface-visibility:hidden] [transform:rotateY(180deg)]">
         <img src={logo} alt={`${name} logo`} className="w-8 h-8 object-contain" />
       </div>
     </div>
@@ -80,9 +67,7 @@ const Card = ({ t, index }: { t: (typeof testimonials)[0]; index: number }) => (
     <div className="flex-1 min-w-0">
       <h3 className="font-heading font-bold text-sm text-foreground">{t.name}</h3>
       <p className="text-xs text-muted-foreground mb-2">{t.role}</p>
-      <p className="text-xs text-foreground/70 leading-relaxed italic">
-        "{t.quote}"
-      </p>
+      <p className="text-xs text-foreground/70 leading-relaxed italic">"{t.quote}"</p>
     </div>
   </div>
 );
@@ -91,9 +76,7 @@ const TestimonialsSection = () => {
   const { ref, visible } = useScrollReveal();
   const trackRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
-  const speed = 0.4; // px por frame
  
-  // Auto-scroll
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -101,8 +84,7 @@ const TestimonialsSection = () => {
  
     const step = () => {
       if (!paused && track) {
-        track.scrollLeft += speed;
-        // Loop infinito: cuando llega a la mitad (contenido duplicado), vuelve al inicio
+        track.scrollLeft += 0.4;
         const half = track.scrollWidth / 2;
         if (track.scrollLeft >= half) {
           track.scrollLeft -= half;
@@ -115,12 +97,8 @@ const TestimonialsSection = () => {
     return () => cancelAnimationFrame(animId);
   }, [paused]);
  
-  // Pausar con interacción del usuario
-  const handleInteractionStart = () => setPaused(true);
-  const handleInteractionEnd = () => {
-    // Pequeño delay para que no retome bruscamente
-    setTimeout(() => setPaused(false), 1500);
-  };
+  const handleStart = () => setPaused(true);
+  const handleEnd = () => setTimeout(() => setPaused(false), 1500);
  
   const items = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
  
@@ -136,33 +114,23 @@ const TestimonialsSection = () => {
         </h2>
       </div>
  
-      <div className="relative">
+      <div className="relative w-full">
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
  
         <div
           ref={trackRef}
-          className="flex gap-6 overflow-x-auto px-8 cursor-grab active:cursor-grabbing"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
-          onMouseEnter={handleInteractionStart}
-          onMouseLeave={handleInteractionEnd}
-          onTouchStart={handleInteractionStart}
-          onTouchEnd={handleInteractionEnd}
+          className="flex gap-6 overflow-x-auto px-8 cursor-grab active:cursor-grabbing scrollbar-hide"
+          onMouseEnter={handleStart}
+          onMouseLeave={handleEnd}
+          onTouchStart={handleStart}
+          onTouchEnd={handleEnd}
         >
           {items.map((t, i) => (
             <Card key={`${t.name}-${i}`} t={t} index={i % testimonials.length} />
           ))}
         </div>
       </div>
- 
-      <style>{`
-        @keyframes flip-slow {
-          0%, 70% { transform: rotateY(0deg); }
-          75%, 90% { transform: rotateY(180deg); }
-          100% { transform: rotateY(0deg); }
-        }
-        div::-webkit-scrollbar { display: none; }
-      `}</style>
     </section>
   );
 };
