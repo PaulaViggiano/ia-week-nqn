@@ -18,7 +18,7 @@ const OrganizersSection = () => {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
-        <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-widest text-foreground/50">
+        <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-widest text-foreground/50 font-mono">
           <span>Organizan</span>
           <span className="text-primary">·</span>
           <span>Coorganizan</span>

@@ -10,7 +10,7 @@ const HeroSection = () => (
       <img
         src="/BannerHero.jpeg"
         alt="IA Week Neuquén 2026 — Del 14 al 16 de Mayo en el Polo Tecnológico"
-        className="w-full rounded-2xl shadow-[0_8px_60px_rgba(11,125,218,0.3)]"
+        className="w-full rounded-sm shadow-[0_8px_60px_rgba(11,125,218,0.3)]"
       />
     </div>
 
@@ -20,14 +20,14 @@ const HeroSection = () => (
         href={CTA_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block gradient-cta font-heading font-bold text-lg md:text-xl px-10 py-4 rounded-full text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform"
+        className="inline-block gradient-cta font-heading font-bold text-lg md:text-xl px-10 py-4 btn-tech rounded-none text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform"
       >
         QUIERO MI LUGAR →
       </a>
 
       <div className="flex flex-wrap justify-center gap-3 mt-6">
         {["📅 14-16 Mayo", "📍 Polo Tecnológico", "✅ Gratuito"].map(chip => (
-          <span key={chip} className="glass-card px-4 py-2 text-sm text-foreground/90">
+          <span key={chip} className="glass-card px-4 py-2 text-sm text-foreground/90 font-mono">
             {chip}
           </span>
         ))}

@@ -23,7 +23,7 @@ const CtaSection = () => {
           href={CTA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block gradient-cta font-heading font-bold text-xl px-12 py-5 rounded-full text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform"
+          className="inline-block gradient-cta font-heading font-bold text-xl px-12 py-5 btn-tech rounded-none text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform"
         >
           → INSCRIBIRME GRATIS
         </a>

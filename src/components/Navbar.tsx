@@ -29,7 +29,7 @@ const Navbar = () => {
             href={CTA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-cta font-heading font-bold text-sm px-5 py-2 rounded-full text-primary-foreground hover:opacity-90 transition-opacity"
+            className="gradient-cta font-heading font-bold text-sm px-5 py-2 btn-tech rounded-none text-primary-foreground hover:opacity-90 transition-opacity"
           >
             Inscribirme
           </a>
