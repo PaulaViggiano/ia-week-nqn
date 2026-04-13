@@ -45,7 +45,7 @@ const CountdownSection = () => {
               <span className="block font-heading font-black text-3xl md:text-5xl text-primary">
                 {String(u.value).padStart(2, "0")}
               </span>
-              <span className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-mono">
+              <span className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider ">
                 {u.label}
               </span>
             </div>

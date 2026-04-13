@@ -17,7 +17,6 @@ export default {
       fontFamily: {
         heading: ['"Rajdhani"', 'sans-serif'],
         body: ['"Exo 2"', 'sans-serif'],
-        mono: ['"Space Mono"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
