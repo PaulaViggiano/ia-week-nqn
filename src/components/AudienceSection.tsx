@@ -12,7 +12,7 @@ const AudienceSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section ref={ref} className="bg-background py-20">
+    <section ref={ref} className="bg-background/90 py-20">
       <div
         className={`container text-center transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

@@ -1,7 +1,7 @@
 import patagoniaLogo from "@/assets/patagoniaLogo.png";
 
 const Footer = () => (
-  <footer className="bg-background border-t border-border py-8">
+  <footer className="bg-background/90 border-t border-border py-8">
     <div className="container text-center space-y-3">
       <div className="flex items-center justify-center gap-3">
         <img src={patagoniaLogo} alt="PatagonIA Solutions" className="h-8" />
