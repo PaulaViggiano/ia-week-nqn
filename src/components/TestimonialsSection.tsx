@@ -15,7 +15,7 @@ const testimonials = [
     name: "Diego Manfio",
     role: "Titular de Ingeniería SIMA SA · ENE Polo Tecnológico",
     photo: "/testimonials/DiegoManfio.png",
-    logo: "/logos/ene.png",
+    logo: "/logos/sima.png",
     quote:
       "Un evento de IA en Neuquén es una ventana al futuro: ideas, innovación y oportunidades para transformar nuestra región.",
   },
@@ -31,7 +31,7 @@ const testimonials = [
     name: "Marcos Galian",
     role: "MSGN",
     photo: "/testimonials/MarcosGalian.png",
-    logo: "/logos/polo.png",
+    logo: "/logos/MSGN.png",
     quote:
       "Este evento es una gran oportunidad para capacitarse, conectar con otros y escuchar a los expertos. Se generará una sinergia de networking altamente positiva para toda la región.",
   },

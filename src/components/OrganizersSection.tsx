@@ -3,9 +3,10 @@ import { useScrollReveal } from "./useScrollReveal";
 const orgs = [
   { name: "Polo Científico Tecnológico", logo: "/logos/polo.png" },
   { name: "SAIA", logo: "/logos/saia.png" },
-  { name: "ENE", logo: "/logos/ene.png" },
+  { name: "Entender Neuquén es Emprender", logo: "/logos/ene.png" },
   { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png" },
   { name: "MMPRO Eventos", logo: "/logos/mmpro.png" },
+  { name: "MSGN Experiencias & Producciones", logo:"/logos/MSGN.png"}
 ];
 
 const OrganizersSection = () => {
