@@ -39,10 +39,10 @@ const CountdownSection = () => {
         <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground mb-8">
           Comienza en
         </h2>
-        <div className="flex justify-center gap-4 md:gap-8">
+        <div className="flex justify-center gap-2 sm:gap-4 md:gap-8">
           {units.map(u => (
-            <div key={u.label} className="glass-card glow-cyan p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
-              <span className="block font-heading font-black text-3xl md:text-5xl text-primary">
+            <div key={u.label} className="glass-card glow-cyan p-3 sm:p-4 md:p-6 min-w-[60px] sm:min-w-[70px] md:min-w-[100px]">
+              <span className="block font-heading font-black text-2xl sm:text-3xl md:text-5xl text-primary">
                 {String(u.value).padStart(2, "0")}
               </span>
               <span className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider ">
