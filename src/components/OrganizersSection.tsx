@@ -2,7 +2,7 @@ import { useScrollReveal } from "./useScrollReveal";
 
 const orgs = [
   { name: "Polo Científico Tecnológico", logo: "/logos/polo.png" },
-  { name: "SAIA", logo: "/logos/saia.png" },
+  { name: "Sociedad Argentina de IA", logo: "/logos/saia.png" },
   { name: "Entender Neuquén es Emprender", logo: "/logos/ene.png" },
   { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png" },
   { name: "MMPRO Eventos", logo: "/logos/mmpro.png" },
