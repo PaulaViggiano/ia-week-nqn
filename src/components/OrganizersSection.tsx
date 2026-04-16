@@ -6,7 +6,8 @@ const orgs = [
   { name: "Entender Neuquén es Emprender", logo: "/logos/ene.png" },
   { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png" },
   { name: "MMPRO Eventos", logo: "/logos/mmpro.png" },
-  { name: "MSGN Experiencias & Producciones", logo:"/logos/MSGN.png"}
+  { name: "MSGN Experiencias & Producciones", logo:"/logos/MSGN.png"},
+  { name: "TKT Eventos", logo:"/logos/logoTktevent.png"}
 ];
 
 const OrganizersSection = () => {
