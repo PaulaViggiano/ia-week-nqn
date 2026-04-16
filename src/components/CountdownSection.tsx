@@ -25,8 +25,8 @@ const CountdownSection = () => {
   const units = [
     { label: "Días", value: time.days },
     { label: "Horas", value: time.hours },
-    { label: "Minutos", value: time.minutes },
-    { label: "Segundos", value: time.seconds },
+    { label: "Min", value: time.minutes },
+    { label: "Seg", value: time.seconds },
   ];
 
   return (
