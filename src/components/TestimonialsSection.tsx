@@ -46,7 +46,7 @@ const testimonials = [
 ];
  
 const FlipAvatar = ({ photo, logo, name, index }: { photo: string; logo: string; name: string; index: number }) => (
-  <div className="w-14 h-14 flex-shrink-0" style={{ perspective: "600px" }}>
+  <div className="w-16 h-16 sm:w-14 sm:h-14 flex-shrink-0" style={{ perspective: "600px" }}>
     <div
       className="relative w-full h-full animate-flip-slow"
       style={{ transformStyle: "preserve-3d", animationDelay: `${index * 1.2}s` }}
@@ -62,12 +62,12 @@ const FlipAvatar = ({ photo, logo, name, index }: { photo: string; logo: string;
 );
  
 const Card = ({ t, index }: { t: (typeof testimonials)[0]; index: number }) => (
-  <div className="glass-card p-5 flex gap-4 items-start w-[340px] flex-shrink-0">
+  <div className="glass-card p-4 sm:p-5 flex gap-3 sm:gap-4 items-start w-[300px] sm:w-[340px] md:w-[380px] flex-shrink-0">
     <FlipAvatar photo={t.photo} logo={t.logo} name={t.name} index={index} />
     <div className="flex-1 min-w-0">
-      <h3 className="font-heading font-bold text-sm text-foreground">{t.name}</h3>
-      <p className="text-xs text-muted-foreground mb-2">{t.role}</p>
-      <p className="text-xs text-foreground/70 leading-relaxed italic">"{t.quote}"</p>
+      <h3 className="font-heading font-bold text-base sm:text-sm text-foreground">{t.name}</h3>
+<p className="text-sm sm:text-xs text-muted-foreground mb-2">{t.role}</p>
+<p className="text-sm sm:text-xs text-foreground/70 leading-relaxed italic">"{t.quote}"</p>
     </div>
   </div>
 );
