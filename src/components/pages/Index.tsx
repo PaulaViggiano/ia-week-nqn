@@ -11,6 +11,7 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import NeuralDecos from "@/components/NeuralDecos";
 import Particles from "@/components/Particles";
+import AgendaSection from "@/components/AgendaSection";
 
 const Index = () => (
   <>
@@ -25,6 +26,7 @@ const Index = () => (
       <CountdownSection />
       <FeaturesSection />
       <SpeakersSection />
+      <AgendaSection />
       <AudienceSection />
       <TestimonialsSection />
       <EventInfoSection />
