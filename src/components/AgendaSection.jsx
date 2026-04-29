@@ -97,15 +97,15 @@ const AgendaSection = () => {
               <span className="font-heading font-bold text-primary text-sm sm:text-base w-[110px] sm:w-[130px] flex-shrink-0">
                 {ev.time}
               </span>
-              <div className="flex-1">
-                <p className="font-heading font-bold text-foreground text-sm sm:text-base">
-                  {ev.title}
-                </p>
+             <div className="flex-1">
                 {ev.speaker && (
-                  <p className="text-muted-foreground text-xs sm:text-sm mt-1">
+                   <p className="font-heading font-bold text-foreground text-sm sm:text-base">
                     {ev.speaker}
                   </p>
                 )}
+                <p className={`text-xs sm:text-sm mt-1 ${ev.speaker ? "text-muted-foreground" : "font-heading font-bold text-foreground text-sm sm:text-base"}`}>
+                   {ev.title}
+                </p>
               </div>
             </div>
           ))}
