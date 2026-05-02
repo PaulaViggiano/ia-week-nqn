@@ -26,7 +26,7 @@ const Index = () => (
       <CountdownSection />
       <FeaturesSection />
       <SpeakersSection />
-      <AgendaSection />
+      {/* <AgendaSection /> */}
       <AudienceSection />
       <TestimonialsSection />
       <EventInfoSection />
