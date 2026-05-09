@@ -14,7 +14,7 @@ const groups = [
     label: "Coorganizan",
     orgs: [
       { name: "ENE", logo: "/logos/ene.png", scale: 1.3 },
-      { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png", scale: 1.2 },
+      { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png", scale: 1 },
       { name: "OSDE", logo: "/logos/osde.png", scale: 1 },
     ],
   },
@@ -23,7 +23,7 @@ const groups = [
     orgs: [
       { name: "MSGN", logo: "/logos/MSGN.png", scale: 1 },
       { name: "MMPRO Eventos", logo: "/logos/mmpro.png", scale: 1 },
-      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.3 },
+      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.5 },
     ],
   },
 ];
