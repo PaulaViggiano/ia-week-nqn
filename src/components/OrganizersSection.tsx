@@ -23,7 +23,7 @@ const groups = [
     orgs: [
       { name: "MSGN", logo: "/logos/MSGN.png", scale: 1 },
       { name: "MMPRO Eventos", logo: "/logos/mmpro.png", scale: 1 },
-      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.5 },
+      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 2 },
     ],
   },
 ];
@@ -33,7 +33,7 @@ const OrganizersSection = () => {
 
   return (
     <section ref={ref} className="py-16">
-      <div className="container max-w-4xl space-y-10">
+      <div className="container max-w-4xl space-y-6">
         {groups.map((group, gi) => (
           <div
             key={group.label}
@@ -43,7 +43,7 @@ const OrganizersSection = () => {
             style={{ transitionDelay: `${gi * 200}ms` }}
           >
             {/* Etiqueta con líneas decorativas */}
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-3">
               <span className="h-px w-12 bg-primary/30" />
               <span className="font-heading font-bold text-xs uppercase tracking-widest text-primary/70">
                 {group.label}
@@ -55,18 +55,20 @@ const OrganizersSection = () => {
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-10">
               {group.orgs.map((org, oi) => (
                 <div
-                  key={org.name}
-                  className={`flex flex-col items-center gap-2 transition-all duration-500 ${
-                    visible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-                  }`}
-                  style={{ transitionDelay: `${gi * 200 + oi * 100}ms` }}
-                >
-                  <img
-                    src={org.logo}
-                    alt={org.name}
-                    style={{ height: `clamp(${2 * org.scale}rem, ${2.5 * org.scale}vw + 1rem, ${3 * org.scale}rem)` }}
-                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                  />
+  key={org.name}
+  className={`flex flex-col items-center transition-all duration-500 ${
+    visible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+  }`}
+  style={{ transitionDelay: `${gi * 200 + oi * 100}ms` }}
+>
+  <div className="h-16 sm:h-20 flex items-end justify-center mb-2">
+    <img
+      src={org.logo}
+      alt={org.name}
+      style={{ height: `clamp(${2 * org.scale}rem, ${2.5 * org.scale}vw + 1rem, ${3 * org.scale}rem)` }}
+      className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+    />
+  </div>
                   <span className="text-xs text-muted-foreground whitespace-nowrap">
                     {org.name}
                   </span>
@@ -76,7 +78,7 @@ const OrganizersSection = () => {
 
             {/* Separador entre grupos (excepto el último) */}
             {gi < groups.length - 1 && (
-              <div className="mt-8 mx-auto w-48 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+              <div className="mt-4 mx-auto w-48 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
             )}
           </div>
         ))}
