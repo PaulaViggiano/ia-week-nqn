@@ -8,7 +8,7 @@ const HeroSection = () => (
     {/* Banner image */}
     <div className="relative z-10 w-full max-w-6xl px-4 mt-20">
       <img
-        src="/BannerHero.jpeg"
+        src="/BannerHero.png"
         alt="IA Week Neuquén 2026 — Del 14 al 16 de Mayo en el Polo Tecnológico"
         className="w-full rounded-sm shadow-[0_8px_60px_rgba(11,125,218,0.3)]"
       />
