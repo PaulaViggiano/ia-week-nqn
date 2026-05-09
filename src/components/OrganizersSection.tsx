@@ -23,7 +23,7 @@ const groups = [
     orgs: [
       { name: "MSGN", logo: "/logos/MSGN.png", scale: 1 },
       { name: "MMPRO Eventos", logo: "/logos/mmpro.png", scale: 1 },
-      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 2 },
+      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.6 },
     ],
   },
 ];
