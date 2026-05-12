@@ -15,12 +15,12 @@ const staticGroups = [
     orgs: [
       { name: "MSGN", logo: "/logos/MSGN.png", scale: 1 },
       { name: "MMPRO Eventos", logo: "/logos/mmpro.png", scale: 1 },
-      { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.6 },
+      { name: "Barda Agencia Digital", logo: "/logos/bardaLogo.png", scale: 1 },
     ],
   },
 ];
 
-const Coorganizan = [
+const Auspician = [
   { name: "ENE", logo: "/logos/ene.png" },
   { name: "IFES Educación Superior", logo: "/logos/ifesLogo.png" },
   { name: "OSDE", logo: "/logos/osde.png" },
@@ -41,6 +41,8 @@ const Coorganizan = [
   { name: "Tech Biz", logo: "/logos/techBizLogo.png" },
   { name: "Dina", logo: "/logos/dinaLogo.png" },
   { name: "Casablanca Carpas", logo: "/logos/Casablanca.png" },
+  { name: "TKT eventos", logo: "/logos/logoTktevent.png", scale: 1.6 },
+
 ];
 
 const StaticGroup = ({
@@ -126,7 +128,7 @@ const StaticGroup = ({
 
 const OrganizersSection = () => {
   const { ref, visible } = useScrollReveal();
-  const marqueeItems = [...Coorganizan, ...Coorganizan, ...Coorganizan, ...Coorganizan];
+  const marqueeItems = [...Auspician, ...Auspician, ...Auspician, ...Auspician];
 
   return (
     <section ref={ref} className="py-16">
@@ -134,7 +136,7 @@ const OrganizersSection = () => {
         {/* 1. Organizan — estático */}
         <StaticGroup group={staticGroups[0]} gi={0} visible={visible} />
 
-        {/* 2. Coorganizan — marquee en el medio */}
+        {/* 2. Auspician — marquee en el medio */}
         <div
           className={`text-center transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -144,7 +146,7 @@ const OrganizersSection = () => {
           <div className="flex items-center justify-center gap-4 mb-3">
             <span className="h-px w-12 bg-primary/30" />
             <span className="font-heading font-bold text-xs uppercase tracking-widest text-primary/70">
-              Coorganizan
+              Auspician
             </span>
             <span className="h-px w-12 bg-primary/30" />
           </div>
@@ -154,7 +156,7 @@ const OrganizersSection = () => {
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
 
             <div className="flex gap-10 w-max animate-marquee-scroll hover:[animation-play-state:paused]"
-              style={{ animationDuration: `${Coorganizan.length * 5}s` }}
+              style={{ animationDuration: `${Auspician.length * 5}s` }}
               >
               {marqueeItems.map((org, i) => (
                 <div
