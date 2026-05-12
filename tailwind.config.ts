@@ -101,7 +101,7 @@ export default {
         "fade-up": "fade-up 0.6s ease-out forwards",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "flip-slow": "flip-slow 10s ease-in-out infinite",
-        "marquee-scroll": "marquee-scroll 60s linear infinite",
+        "marquee-scroll": "marquee-scroll 120s linear infinite",
       },
     },
   },
