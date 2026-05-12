@@ -181,45 +181,9 @@ const OrganizersSection = () => {
           <div className="mt-4 mx-auto w-48 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         </div>
 
-        {/* 3. Producen — estático */}
-        {/* 3. Producen — siempre estático */}
-<div
-  className={`text-center transition-all duration-700 ${
-    visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-  }`}
-  style={{ transitionDelay: "400ms" }}
->
-  <div className="flex items-center justify-center gap-4 mb-3">
-    <span className="h-px w-12 bg-primary/30" />
-    <span className="font-heading font-bold text-xs uppercase tracking-widest text-primary/70">
-      Producen
-    </span>
-    <span className="h-px w-12 bg-primary/30" />
-  </div>
-  <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-    {staticGroups[1].orgs.map((org, oi) => (
-      <div
-        key={org.name}
-        className={`flex flex-col items-center transition-all duration-500 ${
-          visible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-        }`}
-        style={{ transitionDelay: `${400 + oi * 100}ms` }}
-      >
-        <div className="h-16 sm:h-24 flex items-end justify-center mb-2">
-          <img
-            src={org.logo}
-            alt={org.name}
-            style={{
-              height: `clamp(${2 * org.scale}rem, ${2.5 * org.scale}vw + 1rem, ${3 * org.scale}rem)`,
-            }}
-            className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-          />
-        </div>
-        <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
-      </div>
-    ))}
-  </div>
-</div>
+        {/* 3. Producen — desktop estático, mobile marquee */}
+        <StaticGroup group={staticGroups[1]} gi={2} visible={visible} />
+
       </div>
     </section>
   );
