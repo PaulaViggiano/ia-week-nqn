@@ -132,7 +132,7 @@ const OrganizersSection = () => {
 
   return (
     <section ref={ref} className="py-16">
-      <div className="container max-w-4xl space-y-6">
+      <div className="container max-w-6xl space-y-6">
         {/* 1. Organizan — estático */}
         <StaticGroup group={staticGroups[0]} gi={0} visible={visible} />
 
