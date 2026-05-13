@@ -49,7 +49,6 @@ const auspician = [
   { name: "PwC", logo: "/logos/pwcLogo.png", scale: 1.5},
   { name: "RESTART", logo: "/logos/restartLogo.png" },
   { name: "Sancor Seguros", logo: "/logos/sancorLogo.png" },
-  { name: "SIMA", logo: "/logos/sima.png" },
   { name: "Universidad Patagonia", logo: "/logos/UniPatagoniaLogo.png" },
   { name: "Vista", logo: "/logos/vistaLogo.png" },
   { name: "YPF", logo: "/logos/ypfLogo.png" },
