@@ -8,7 +8,7 @@ const agenda = [
     day: "Día 1",
     date: "Jueves 14 de Mayo",
     events: [
-      { time: "09:00 - 09:50", title: "Acto de Apertura y Recorrido — Conferencia de Prensa", speaker: "" },
+      { time: "09:00 – 09:50", title: "Acto de Apertura y Recorrido — Conferencia de Prensa", speaker: "" },
       { time: "10:00 – 10:30", title: "IA aplicada a procesos administrativos: Menos fricción, más control", speaker: "Alberto Bressan | ESTRATEGIAS INTEGRALES CONSULTORES" },
       { time: "10:40 – 11:10", title: "Auditoría documental con IA para Oil & Gas", speaker: "Lucas Maidana & Francisco Teixido | ORBITIA" },
       { time: "11:20 – 11:50", title: "Cómo construir nuevas realidades de Gestión", speaker: "Santiago Cordone | PAUSA" },
