@@ -124,7 +124,7 @@ const OrganizersSection = () => {
                     style={{
                       height: `clamp(${2.2 * org.scale}rem, ${3 * org.scale}vw + 1rem, ${3.5 * org.scale}rem)`,
                     }}
-                    className="w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                    className="w-auto object-contain opacity-90 hover:opacity-100 transition-opacity logo-glow"
                   />
                 </div>
                 <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">
@@ -210,7 +210,7 @@ const OrganizersSection = () => {
                       src={org.logo}
                       alt={org.name}
                       style={{ height: `clamp(${1.5 * org.scale}rem, ${2 * org.scale}vw, ${2.2 * org.scale}rem)` }}
-                      className="w-auto object-contain opacity-80"
+                      className="w-auto object-contain opacity-80 logo-glow"
                     />
                   </div>
                   <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
@@ -245,7 +245,7 @@ const OrganizersSection = () => {
                     <img
                       src={org.logo}
                       alt={org.name}
-                      className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                      className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-glow"
                     />
                   </div>
                   <span className="text-[10px] text-muted-foreground whitespace-nowrap">{org.name}</span>
@@ -272,7 +272,7 @@ const OrganizersSection = () => {
               <img
                 src={mediosPrincipal.logo}
                 alt={mediosPrincipal.name}
-                className="h-16 sm:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                className="h-16 sm:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity logo-glow"
               />
               <span className="text-sm sm:text-base font-heading font-bold text-muted-foreground mt-3">
                 {mediosPrincipal.name}
@@ -295,7 +295,7 @@ const OrganizersSection = () => {
                   <img
                     src={medio.logo}
                     alt={medio.name}
-                    className="h-7 sm:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    className="h-7 sm:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-glow"
                   />
                 </div>
                 <span className="text-[10px] sm:text-xs text-muted-foreground whitespace-nowrap">
@@ -353,7 +353,7 @@ const OrganizersSection = () => {
                     style={{
                       height: `clamp(${2 * org.scale}rem, ${2.5 * org.scale}vw + 1rem, ${3 * org.scale}rem)`,
                     }}
-                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-glow"
                   />
                 </div>
                 <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
