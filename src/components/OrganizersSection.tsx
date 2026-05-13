@@ -11,7 +11,7 @@ const organizan = [
 ];
 
 const presentan = [
-  { name: "Globant", logo: "/logos/globantLogo.png" },
+  { name: "Globant", logo: "/logos/globantLogo.png", scale: 1 },
   { name: "SIMA Ingeniería", logo: "/logos/sima.png", scale: 1 },
   { name: "Sancor Seguros", logo: "/logos/sancorLogo.png", scale: 1 },
   { name: "Gobierno de la Provincia", logo: "/logos/provinciaLogo.png", scale: 1 },
