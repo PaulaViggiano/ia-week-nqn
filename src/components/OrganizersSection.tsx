@@ -61,6 +61,7 @@ const mediosSecundarios = [
   { name: "Diario de Río Negro", logo: "/logos/rioNegroLogo.png" },
   { name: "La Mañana de Neuquén", logo: "/logos/lmNeuquenLogo.png" },
   { name: "Guía Cores", logo: "/logos/guiaCoresLogo.png" },
+  { name: "Cumbres", logo: "/logos/cumbreLogo.png" },
 ];
 
 const producen = [
