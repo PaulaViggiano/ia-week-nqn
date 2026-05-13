@@ -55,6 +55,7 @@ const auspician = [
   { name: "Schlumberger", logo: "/logos/slbLogo.png", scale: 1.8 },
   { name: "SIAM", logo: "/logos/siamLogo.png" },
   { name: "Consejo Profesional", logo: "/logos/consejoProvincialLogo.png" },
+  { name: "SAMPE", logo: "/logos/sampeLogo.png" },
 ];
 
 const mediosPrincipal = { name: "Infoenergía", logo: "/logos/infoenergiaLogo.png"};
