@@ -46,13 +46,16 @@ const auspician = [
   { name: "Pason", logo: "/logos/pasonLogo.png" },
   { name: "Patagonia Solutions", logo: "/logos/patagoniaSolutionsLogo.png" },
   { name: "Patagonia Trading Food", logo: "/logos/patagTradingFood.png" },
-  { name: "PwC", logo: "/logos/pwcLogo.png" },
+  { name: "PwC", logo: "/logos/pwcLogo.png", scale: 1.5},
   { name: "RESTART", logo: "/logos/restartLogo.png" },
   { name: "Sancor Seguros", logo: "/logos/sancorLogo.png" },
   { name: "SIMA", logo: "/logos/sima.png" },
-  { name: "Universidad Patagonia", logo: "/logos/uniPatagoniaLogo.png" },
+  { name: "Universidad Patagonia", logo: "/logos/UniPatagoniaLogo.png" },
   { name: "Vista", logo: "/logos/vistaLogo.png" },
   { name: "YPF", logo: "/logos/ypfLogo.png" },
+  { name: "Schlumberger", logo: "/logos/slbLogo.png", scale: 1.8 },
+  { name: "SIAM", logo: "/logos/siamLogo.png" },
+  { name: "Consejo Profesional", logo: "/logos/consejoProvincialLogo.png" },
 ];
 
 const mediosPrincipal = { name: "Infoenergía", logo: "/logos/infoenergiaLogo.png"};
@@ -61,7 +64,7 @@ const mediosSecundarios = [
   { name: "Diario de Río Negro", logo: "/logos/rioNegroLogo.png" },
   { name: "La Mañana de Neuquén", logo: "/logos/lmNeuquenLogo.png" },
   { name: "Guía Cores", logo: "/logos/guiaCoresLogo.png" },
-  { name: "Cumbres", logo: "/logos/cumbreLogo.png" },
+  { name: "Cumbre Neuquén", logo: "/logos/cumbreLogo.png" },
 ];
 
 const producen = [
