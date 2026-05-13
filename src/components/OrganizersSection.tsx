@@ -11,7 +11,7 @@ const organizan = [
 ];
 
 const presentan = [
-  { name: "DV Tech", logo: "/logos/dvTechLogo.png", scale: 1.8 },
+  { name: "Globant", logo: "/logos/globantLogo.png" },
   { name: "SIMA Ingeniería", logo: "/logos/sima.png", scale: 1 },
   { name: "Sancor Seguros", logo: "/logos/sancorLogo.png", scale: 1 },
   { name: "Gobierno de la Provincia", logo: "/logos/provinciaLogo.png", scale: 1 },
@@ -33,7 +33,7 @@ const auspician = [
   { name: "DAVITEL", logo: "/logos/davitelLogo.png" },
   { name: "Dina", logo: "/logos/dinaLogo.png" },
   { name: "Endeavor", logo: "/logos/endeavorLogo.png" },
-  { name: "Globant", logo: "/logos/globantLogo.png" },
+  { name: "DV Tech", logo: "/logos/dvTechLogo.png", scale: 1.8 },
   { name: "Instituto Balseiro", logo: "/logos/balseiroLogo.png" },
   { name: "LCDH", logo: "/logos/LCDHLogo.png" },
   { name: "Leo Sfeir & Asoc.", logo: "/logos/leoSfeirLogo.png" },
