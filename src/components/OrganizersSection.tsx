@@ -185,7 +185,7 @@ const OrganizersSection = () => {
                     style={{
                        height: `clamp(${1.8 * org.scale}rem, ${2.2 * org.scale}vw + 0.5rem, ${2.8 * org.scale}rem)`,
                       }}
-                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-light"
                   />
                 </div>
                 <span className="text-xs text-muted-foreground whitespace-nowrap">
@@ -210,7 +210,7 @@ const OrganizersSection = () => {
                       src={org.logo}
                       alt={org.name}
                       style={{ height: `clamp(${1.5 * org.scale}rem, ${2 * org.scale}vw, ${2.2 * org.scale}rem)` }}
-                      className="w-auto object-contain opacity-80 logo-glow"
+                      className="w-auto object-contain opacity-80 logo-light"
                     />
                   </div>
                   <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
@@ -245,7 +245,7 @@ const OrganizersSection = () => {
                     <img
                       src={org.logo}
                       alt={org.name}
-                      className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-glow"
+                      className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-light"
                     />
                   </div>
                   <span className="text-[10px] text-muted-foreground whitespace-nowrap">{org.name}</span>
@@ -295,7 +295,7 @@ const OrganizersSection = () => {
                   <img
                     src={medio.logo}
                     alt={medio.name}
-                    className="h-7 sm:h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity logo-glow"
+                    className="h-7 sm:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-light"
                   />
                 </div>
                 <span className="text-[10px] sm:text-xs text-muted-foreground whitespace-nowrap">
@@ -316,7 +316,7 @@ const OrganizersSection = () => {
               {[...mediosSecundarios, ...mediosSecundarios, ...mediosSecundarios, ...mediosSecundarios].map((medio, i) => (
                 <div key={`${medio.name}-${i}`} className="flex flex-col items-center gap-2 flex-shrink-0">
                   <div className="h-10 flex items-end justify-center">
-                    <img src={medio.logo} alt={medio.name} className="h-7 w-auto object-contain opacity-70" />
+                    <img src={medio.logo} alt={medio.name} className="h-7 w-auto object-contain opacity-80 logo-light" />
                   </div>
                   <span className="text-[10px] text-muted-foreground whitespace-nowrap">{medio.name}</span>
                 </div>

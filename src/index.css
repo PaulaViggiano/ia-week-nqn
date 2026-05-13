@@ -149,7 +149,11 @@
   }
 
   .logo-glow {
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.25));
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.35));
+  }
+
+  .logo-light {
+    filter: brightness(1.5) drop-shadow(0 0 10px rgba(255,255,255,0.3));
   }
 }
 
