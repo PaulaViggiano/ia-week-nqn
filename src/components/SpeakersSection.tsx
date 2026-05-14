@@ -2,11 +2,11 @@ import { useScrollReveal } from "./useScrollReveal";
 
 const speakers = [
   { name: "Santi Siri", role: "Speaker confirmado", img: "/santiagoSiri.png" },
-  { name: "Yas Garcia", role: "Speaker confirmado", img: "/yasGarcia.png" },
   { name: "Fredi Vivas", role: "Speaker confirmado", img: "/frediVivas.png" },
   { name: "Alexander Ditzend", role: "Speaker confirmado", img: "/alexanderDitzend.png" },
   { name: "Silvana Querci", role: "Speaker confirmado", img: "/silvanaQuerci.png" },
   { name: "Diego Manfio", role: "Speaker confirmado", img: "/diegoManfio.png" },
+  { name: "Gustavo Cabrera", role: "Speaker confirmado", img:"/testimonials/GustavoCabrera.png"}
   
 ];
 
