@@ -1,4 +1,4 @@
-import patagoniaLogo from "@/assets/patagoniaLogo.png";
+import patagoniaLogo from "@/assets/patagoniaLogo.webp";
 
 const Footer = () => (
   <footer className="bborder-t border-border py-8">

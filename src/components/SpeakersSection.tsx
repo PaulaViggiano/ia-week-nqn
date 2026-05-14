@@ -1,12 +1,12 @@
 import { useScrollReveal } from "./useScrollReveal";
 
 const speakers = [
-  { name: "Santi Siri", role: "Speaker confirmado", img: "/santiagoSiri.png" },
-  { name: "Fredi Vivas", role: "Speaker confirmado", img: "/frediVivas.png" },
-  { name: "Alexander Ditzend", role: "Speaker confirmado", img: "/alexanderDitzend.png" },
-  { name: "Silvana Querci", role: "Speaker confirmado", img: "/silvanaQuerci.png" },
-  { name: "Diego Manfio", role: "Speaker confirmado", img: "/diegoManfio.png" },
-  { name: "Gustavo Cabrera", role: "Speaker confirmado", img:"/testimonials/GustavoCabrera.png"}
+  { name: "Santi Siri", role: "Speaker confirmado", img: "/santiagoSiri.webp" },
+  { name: "Fredi Vivas", role: "Speaker confirmado", img: "/frediVivas.webp" },
+  { name: "Alexander Ditzend", role: "Speaker confirmado", img: "/alexanderDitzend.webp" },
+  { name: "Silvana Querci", role: "Speaker confirmado", img: "/silvanaQuerci.webp" },
+  { name: "Diego Manfio", role: "Speaker confirmado", img: "/diegoManfio.webp" },
+  { name: "Gustavo Cabrera", role: "Speaker confirmado", img:"/testimonials/GustavoCabrera.webp"}
   
 ];
 

@@ -6,40 +6,40 @@ const testimonials = [
   {
     name: "Alexander Ditzend",
     role: "Sociedad Argentina de Inteligencia Artificial",
-    photo: "/testimonials/AlexanderDitzend.png",
-    logo: "/logos/saia.png",
+    photo: "/testimonials/AlexanderDitzend.webp",
+    logo: "/logos/saia.webp",
     quote:
       "La IA no es sólo una herramienta tecnológica: es una oportunidad para transformar industrias, generar talento local y posicionar a la Argentina como referente regional en innovación.",
   },
   {
     name: "Diego Manfio",
     role: "Titular de Ingeniería SIMA SA · ENE Polo Tecnológico",
-    photo: "/testimonials/DiegoManfio.png",
-    logo: "/logos/sima.png",
+    photo: "/testimonials/DiegoManfio.webp",
+    logo: "/logos/sima.webp",
     quote:
       "Un evento de IA en Neuquén es una ventana al futuro: ideas, innovación y oportunidades para transformar nuestra región.",
   },
   {
     name: "Gustavo Cabrera",
     role: "IFES Educación Superior",
-    photo: "/testimonials/GustavoCabrera.png",
-    logo: "/logos/ifesLogo.png",
+    photo: "/testimonials/GustavoCabrera.webp",
+    logo: "/logos/ifesLogo.webp",
     quote:
       "Este evento es clave para potenciar el futuro de Vaca Muerta, integrando la IA para el crecimiento y buscando que la tecnología impulse la capacidad de nuestro sector productivo.",
   },
   {
     name: "Marcos Galian",
     role: "MSGN",
-    photo: "/testimonials/MarcosGalian.png",
-    logo: "/logos/MSGN.png",
+    photo: "/testimonials/MarcosGalian.webp",
+    logo: "/logos/MSGN.webp",
     quote:
       "Este evento es una gran oportunidad para capacitarse, conectar con otros y escuchar a los expertos. Se generará una sinergia de networking altamente positiva para toda la región.",
   },
   {
     name: "Marcela Messineo",
     role: "MMPRO Eventos",
-    photo: "/testimonials/MarcelaMessineo.png",
-    logo: "/logos/mmpro.png",
+    photo: "/testimonials/MarcelaMessineo.webp",
+    logo: "/logos/mmpro.webp",
     quote:
       "Es una invitación a activar, el potencial de nuestra región. Integramos la IA como una fuerza transformadora que expande el talento e impulsa la innovación.",
   },
