@@ -5,8 +5,9 @@ const speakers = [
   { name: "Yas Garcia", role: "Speaker confirmado", img: "/yasGarcia.png" },
   { name: "Fredi Vivas", role: "Speaker confirmado", img: "/frediVivas.png" },
   { name: "Alexander Ditzend", role: "Speaker confirmado", img: "/alexanderDitzend.png" },
-  { name: "Diego Manfio", role: "Speaker confirmado", img: "/diegoManfio.png" },
   { name: "Silvana Querci", role: "Speaker confirmado", img: "/silvanaQuerci.png" },
+  { name: "Diego Manfio", role: "Speaker confirmado", img: "/diegoManfio.png" },
+  
 ];
 
 const SectionLabel = ({ text }: { text: string }) => (
