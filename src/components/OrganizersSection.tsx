@@ -10,18 +10,18 @@ const organizan = [
   { name: "SAIA", logo: "/logos/saia.webp", scale: 1 },
 ];
 
+const institucionales = [
+  { name: "Gobierno de la Provincia", logo: "/logos/provinciaLogo.webp", scale: 1 },
+  { name: "BPN", logo: "/logos/bpnLogo.webp", scale: 1 },
+
+]
+
 const presentan = [
   { name: "Globant", logo: "/logos/globantLogo.webp", scale: 1 },
   { name: "SIMA Ingeniería", logo: "/logos/sima.webp", scale: 1 },
   { name: "Sancor Seguros", logo: "/logos/sancorLogo.webp", scale: 1 },
   { name: "IFES Educación Superior", logo: "/logos/ifesLogo.webp", scale: 1 },
 ];
-
-const institucionales = [
-  { name: "Gobierno de la Provincia", logo: "/logos/provinciaLogo.webp", scale: 1 },
-  { name: "BPN", logo: "/logos/bpnLogo.webp", scale: 1 },
-
-]
 
 const auspician = [
   { name: "ABB", logo: "/logos/abbLogo.webp" },
@@ -164,6 +164,68 @@ const OrganizersSection = () => {
           <Divider />
         </div>
 
+        {/* ── INSTITUCIONALES ── */}
+        <div
+          className={`text-center transition-all duration-700 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "200ms" }}
+        >
+          <SectionLabel text="Institucionales" />
+
+          {/* Desktop: estático */}
+          <div className="hidden sm:flex flex-wrap items-end justify-center gap-x-10 gap-y-4">
+            {institucionales.map((org, oi) => (
+              <div
+                key={org.name}
+                className={`flex flex-col items-center transition-all duration-500 ${
+                  visible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+                }`}
+                style={{ transitionDelay: `${200 + oi * 100}ms` }}
+              >
+                <div className="h-20 sm:h-24 flex items-end justify-center mb-2">
+                  <img
+                    src={org.logo}
+                    alt={org.name}
+                    style={{
+                      height: `clamp(${1.8 * org.scale}rem, ${2.2 * org.scale}vw + 0.5rem, ${2.8 * org.scale}rem)`,
+                    }}
+                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-glow"
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                  {org.name}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: marquee */}
+          <div className="sm:hidden relative w-full overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
+            <div
+              className="flex gap-8 w-max animate-marquee-scroll"
+              style={{ animationDuration: `${institucionales.length * 5}s` }}
+            >
+              {[...institucionales, ...institucionales, ...institucionales, ...institucionales].map((org, i) => (
+                <div key={`${org.name}-${i}`} className="flex flex-col items-center gap-2 flex-shrink-0">
+                  <div className="h-14 flex items-end justify-center">
+                    <img
+                      src={org.logo}
+                      alt={org.name}
+                      className="h-10 w-auto object-contain opacity-80 logo-glow"
+                    />
+                  </div>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <Divider />
+        </div>
+
         {/* ── 2. PRESENTAN ── logos medianos, estático desktop, marquee mobile */}
         <div
           className={`text-center transition-all duration-700 ${
@@ -216,68 +278,6 @@ const OrganizersSection = () => {
                       alt={org.name}
                       style={{ height: `clamp(${1.5 * org.scale}rem, ${2 * org.scale}vw, ${2.2 * org.scale}rem)` }}
                       className="w-auto object-contain opacity-80 logo-light"
-                    />
-                  </div>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <Divider />
-        </div>
-
-        {/* ── INSTITUCIONALES ── */}
-        <div
-          className={`text-center transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{ transitionDelay: "200ms" }}
-        >
-          <SectionLabel text="Institucionales" />
-
-          {/* Desktop: estático */}
-          <div className="hidden sm:flex flex-wrap items-end justify-center gap-x-10 gap-y-4">
-            {institucionales.map((org, oi) => (
-              <div
-                key={org.name}
-                className={`flex flex-col items-center transition-all duration-500 ${
-                  visible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-                }`}
-                style={{ transitionDelay: `${200 + oi * 100}ms` }}
-              >
-                <div className="h-20 sm:h-24 flex items-end justify-center mb-2">
-                  <img
-                    src={org.logo}
-                    alt={org.name}
-                    style={{
-                      height: `clamp(${1.8 * org.scale}rem, ${2.2 * org.scale}vw + 0.5rem, ${2.8 * org.scale}rem)`,
-                    }}
-                    className="w-auto object-contain opacity-80 hover:opacity-100 transition-opacity logo-glow"
-                  />
-                </div>
-                <span className="text-xs text-muted-foreground whitespace-nowrap">
-                  {org.name}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile: marquee */}
-          <div className="sm:hidden relative w-full overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[hsl(210,100%,6%)] to-transparent z-10 pointer-events-none" />
-            <div
-              className="flex gap-8 w-max animate-marquee-scroll"
-              style={{ animationDuration: `${institucionales.length * 5}s` }}
-            >
-              {[...institucionales, ...institucionales, ...institucionales, ...institucionales].map((org, i) => (
-                <div key={`${org.name}-${i}`} className="flex flex-col items-center gap-2 flex-shrink-0">
-                  <div className="h-14 flex items-end justify-center">
-                    <img
-                      src={org.logo}
-                      alt={org.name}
-                      className="h-10 w-auto object-contain opacity-80 logo-glow"
                     />
                   </div>
                   <span className="text-xs text-muted-foreground whitespace-nowrap">{org.name}</span>
