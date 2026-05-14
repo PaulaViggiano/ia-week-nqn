@@ -38,7 +38,7 @@ const SpeakersSection = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <SectionLabel text="IA Week 2025" />
+          <SectionLabel text="IA Week 2026" />
         </div>
 
         {/* Grid 2 cols mobile / 3 cols desktop */}

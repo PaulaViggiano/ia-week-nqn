@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import NeuralDecos from "@/components/NeuralDecos";
 import Particles from "@/components/Particles";
 import AgendaSection from "@/components/AgendaSection";
+import ConferenciasSection from "@/components/ConferenciasSection";
 
 const Index = () => (
   <>
@@ -26,6 +27,7 @@ const Index = () => (
       <CountdownSection />
       <FeaturesSection />
       <SpeakersSection />
+      <ConferenciasSection />
       <AgendaSection />
       <AudienceSection />
       <TestimonialsSection />
