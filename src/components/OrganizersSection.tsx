@@ -55,7 +55,6 @@ const auspician = [
   { name: "PLP Climatizaciones", logo: "/logos/plpLogo.webp" },
   { name: "Thomson Routers", logo: "/logos/thomsonReutersLogo.webp" },
   { name: "RESTART", logo: "/logos/restartLogo.webp" },
-  { name: "Sancor Seguros", logo: "/logos/sancorLogo.webp" },
   { name: "Universidad Patagonia", logo: "/logos/UniPatagoniaLogo.webp" },
   { name: "Vista", logo: "/logos/vistaLogo.webp" },
   { name: "YPF", logo: "/logos/ypfLogo.webp" },
