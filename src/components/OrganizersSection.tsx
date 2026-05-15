@@ -60,6 +60,7 @@ const auspician = [
   { name: "SIAM", logo: "/logos/siamLogo.webp" },
   { name: "Consejo Profesional", logo: "/logos/consejoProvincialLogo.webp" },
   { name: "SAMPE", logo: "/logos/sampeLogo.webp" },
+  { name: "Impacto Económico", logo: "/logos/impacto.webp" },
 ];
 
 const mediosPrincipal = { name: "Infoenergía", logo: "/logos/infoenergiaLogo.webp"};
